@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 RewriteEngine On
 
 # Handle CORS
@@ -7,4 +8,15 @@ Header set Access-Control-Allow-Headers "Content-Type"
 
 # Handle preflight
 RewriteCond %{REQUEST_METHOD} OPTIONS
+=======
+RewriteEngine On
+
+# Handle CORS
+Header set Access-Control-Allow-Origin "*"
+Header set Access-Control-Allow-Methods "GET, POST, DELETE, OPTIONS"
+Header set Access-Control-Allow-Headers "Content-Type"
+
+# Handle preflight
+RewriteCond %{REQUEST_METHOD} OPTIONS
+>>>>>>> a206b8979b8b16cd7c8a933c98035cbe5625695e
 RewriteRule ^(.*)$ $1 [R=200,L]
